@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="x_1105922_flight_1_request">flight_statusISNOTEMPTY<item endquery="false" field="flight_status" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {}]]></script_false>
+        <script_true><![CDATA[function onCondition() {}]]></script_true>
+        <set_values/>
+        <short_description>Make flight number read only when Flight Status is not empty.</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 02:32:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d2ae3c70c3d712104b933342b401310b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Make flight number read only when Flight Status is not empty.</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_ui_policy_d2ae3c70c3d712104b933342b401310b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 02:32:06</sys_updated_on>
+        <table>x_1105922_flight_1_request</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flight Request">c7917cb8c35712104b933342b4013144</application>
+        <file_path/>
+        <instance_id>4408371e1b163190168f4089bd4bcb39</instance_id>
+        <instance_name>dev206424</instance_name>
+        <name>sys_ui_policy_d2ae3c70c3d712104b933342b401310b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="x_1105922_flight_1_request"&gt;flight_statusISNOTEMPTY&lt;item endquery="false" field="flight_status" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Make flight number read only when Flight Status is not empty.&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-22 02:32:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d2ae3c70c3d712104b933342b401310b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Make flight number read only when Flight Status is not empty.&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Flight Request" source="x_1105922_flight_1"&gt;c7917cb8c35712104b933342b4013144&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flight Request"&gt;c7917cb8c35712104b933342b4013144&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_d2ae3c70c3d712104b933342b401310b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-22 02:32:06&lt;/sys_updated_on&gt;&lt;table&gt;x_1105922_flight_1_request&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-392417750</payload_hash>
+        <record_name>Make flight number read only when Flight Status is not empty.</record_name>
+        <reverted_from/>
+        <source>4b917cb8c35712104b933342b4013146</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 02:32:06</sys_created_on>
+        <sys_id>deae3c70c3d712104b933342b401310d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1948bda4bc30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 02:32:06</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>92ae3c704ed712109431d20f2115640d</update_guid>
+        <update_guid_history>92ae3c704ed712109431d20f2115640d:-392417750</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 06:52:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>1db18757e21a4b48a52af57241a1b459</sys_id>
+        <sys_metadata>d2ae3c70c3d712104b933342b401310b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Make flight number read only when Flight Status is not empty.</sys_name>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_parent display_value="Request">c2c2b4b0c39712104b933342b4013137</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_scope_delete display_value="">2f73ffb238dd4bc3a34189ae446bb301</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_d2ae3c70c3d712104b933342b401310b</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_d2ae3c70c3d712104b933342b401310b">deae3c70c3d712104b933342b401310d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:52:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1105922_flight_1_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1105922_flight_1_request">airlineANYTHING^flight_numberANYTHING^EQ<item endquery="false" field="airline" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/>
+            <item endquery="false" field="flight_number" goto="false" newquery="false" operator="ANYTHING" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Set Flight Code</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    if (current.flight_number) {
+        // Check if flight number is numeric
+        if (!/^\d+$/.test(current.flight_number.toString())) {
+            gs.addErrorMessage('Flight Number must contain only numbers');
+            current.setAbortAction(true);
+            return;
+        }
+        
+        // If numeric, proceed with setting flight code
+        current.flight_code = current.airline.icao + current.flight_number;
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:53:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>db7dd534c39b12104b933342b401316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Flight Code</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_script_db7dd534c39b12104b933342b401316d</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:53:59</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=db7dd534c39b12104b933342b401316d"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>db7dd534c39b12104b933342b401316d</id>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:53:59</sys_created_on>
+        <sys_id>fc2fddb0c39b12104b933342b401313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:53:59</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

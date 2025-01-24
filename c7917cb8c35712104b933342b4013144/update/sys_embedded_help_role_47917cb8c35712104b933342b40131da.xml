@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1105922_flight_1.user" name="x_1105922_flight_1.user">8f917cb8c35712104b933342b40131d8</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 01:35:05</sys_created_on>
+        <sys_id>47917cb8c35712104b933342b40131da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>8f917cb8c35712104b933342b40131d8</sys_name>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_embedded_help_role_47917cb8c35712104b933342b40131da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-22 01:35:05</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

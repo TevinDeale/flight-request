@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="DELETE">
+        <active>true</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions/>
+        <description/>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_1105922_flight_1_request</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description/>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:02:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b45315f4c35b12104b933342b40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_data_policy2_b45315f4c35b12104b933342b40131f2</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:02:40</sys_updated_on>
+    </sys_data_policy2>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flight Request">c7917cb8c35712104b933342b4013144</application>
+        <file_path/>
+        <instance_id>4408371e1b163190168f4089bd4bcb39</instance_id>
+        <instance_name>dev206424</instance_name>
+        <name>sys_data_policy2_b45315f4c35b12104b933342b40131f2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2"><sys_data_policy2 action="INSERT_OR_UPDATE"><active>true</active><apply_import_set>true</apply_import_set><apply_soap>true</apply_soap><conditions/><description/><enforce_ui>true</enforce_ui><inherit>false</inherit><model_id/><model_table>x_1105922_flight_1_request</model_table><reverse_if_false>true</reverse_if_false><short_description/><sys_class_name>sys_data_policy2</sys_class_name><sys_created_by>tevin.deale</sys_created_by><sys_created_on>2025-01-22 04:02:40</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b45315f4c35b12104b933342b40131f2</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package><sys_policy/><sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope><sys_update_name>sys_data_policy2_b45315f4c35b12104b933342b40131f2</sys_update_name><sys_updated_by>tevin.deale</sys_updated_by><sys_updated_on>2025-01-22 04:02:40</sys_updated_on></sys_data_policy2></record_update>]]></payload>
+        <payload_hash>-1964660524</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>4b917cb8c35712104b933342b4013146</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:02:40</sys_created_on>
+        <sys_id>096315f4c35b12104b933342b40131fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1948c2d35c80000001</sys_recorded_at>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:02:40</sys_updated_on>
+        <type>Data Policy</type>
+        <update_guid>c96315f43b5b12101021b111c1a0bdf9</update_guid>
+        <update_guid_history>c96315f43b5b12101021b111c1a0bdf9:-1964660524</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:03:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy2">sys_data_policy2</sys_db_object>
+        <sys_id>4d0e65a5369e462ea7b88e28ec2ea0a4</sys_id>
+        <sys_metadata>b45315f4c35b12104b933342b40131f2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_parent display_value="Request">c2c2b4b0c39712104b933342b4013137</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_scope_delete display_value="">2f73ffb238dd4bc3a34189ae446bb301</sys_scope_delete>
+        <sys_update_name>sys_data_policy2_b45315f4c35b12104b933342b40131f2</sys_update_name>
+        <sys_update_version display_value="sys_data_policy2_b45315f4c35b12104b933342b40131f2">096315f4c35b12104b933342b40131fa</sys_update_version>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:03:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

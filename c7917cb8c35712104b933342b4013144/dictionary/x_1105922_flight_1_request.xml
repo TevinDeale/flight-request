@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="c2c2b4b0c39712104b933342b4013137" label="Request" max_length="40" name="x_1105922_flight_1_request" type="collection">
+        <element choice="1" label="Approval Status" max_length="40" name="approval_status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="Pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="Approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="Rejected"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Request ID" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Arrival Time" max_length="40" name="arrival_time" read_only="true" type="glide_date_time"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="bdcb83a85f220100a9ad2572f2b4773d" label="Requested For" max_length="32" name="requested_for" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Departure Time" max_length="255" name="departure_time" read_only="true" type="glide_date_time"/>
+        <element label="Airline" mandatory="true" max_length="100" name="airline" reference="x_1105922_airline_airlines" type="reference"/>
+        <element label="Terminal" max_length="40" name="terminal" read_only="true" type="string"/>
+        <element label="Flight Number" mandatory="true" max_length="40" name="flight_number" type="string"/>
+        <element label="Gate" max_length="40" name="gate" read_only="true" type="string"/>
+        <element label="Cost" mandatory="true" max_length="40" name="cost" type="decimal"/>
+        <element label="Arrival City" max_length="200" name="arrival_city" read_only="true" type="string"/>
+        <element label="Delay" max_length="40" name="delay" read_only="true" type="string"/>
+        <element label="Manager" max_length="32" name="approval_manager" read_only="true" reference="sys_user" type="reference"/>
+        <element label="Departure City" max_length="200" name="departure_city" read_only="true" type="string"/>
+        <element label="Flight Status" max_length="40" name="flight_status" read_only="true" type="string"/>
+        <element label="Flight Code" max_length="40" name="flight_code" read_only="true" type="string"/>
+        <index name="index">
+            <element name="approval_manager"/>
+        </index>
+        <index name="index2">
+            <element name="cost"/>
+        </index>
+        <index name="index3">
+            <element name="requested_for"/>
+        </index>
+    </element>
+</database>

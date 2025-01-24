@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="fx_configuration">
+    <fx_configuration action="INSERT_OR_UPDATE">
+        <aggregation_source>default</aggregation_source>
+        <conversion_date_source/>
+        <display_digits>-1</display_digits>
+        <display_value>in_reference_currency</display_value>
+        <rate_filter_rate_table_field/>
+        <rate_filter_target_table_field/>
+        <rate_table>fx_system_rate</rate_table>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <reference_currency_source/>
+        <sys_class_name>fx_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-22 02:16:33</sys_created_on>
+        <sys_id>8eea307cc39712104b933342b40131d1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>fx_configuration_8eea307cc39712104b933342b40131d1</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 03:49:33</sys_updated_on>
+        <target_field>cost</target_field>
+        <target_table>x_1105922_flight_1_request</target_table>
+    </fx_configuration>
+</record_update>

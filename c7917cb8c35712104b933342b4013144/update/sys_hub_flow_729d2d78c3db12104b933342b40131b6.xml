@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls>9607b505c31392104b933342b40131f0</acls>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=84577000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>true</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Populate flight details on Flight Request record</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>populate_flight_details</internal_name>
+        <label_cache>[{"name":"Updated_1.current.flight_code","label":"Trigger - Record Updated➛Request Record➛Flight Code","reference":"","reference_display":"Flight Code","type":"string","base_type":"string","parent_table_name":"x_1105922_flight_1_request","column_name":"flight_code","usedInstances":{"c891d277-5683-4b3a-b94a-39aace9e57a6":["flight_code"]}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.flight_status","label":"1 - Flight Info➛Flight Status","reference_display":"Flight Status","type":"string","base_type":"string","usedInstances":{"fd61427c-9516-4a89-afbe-cefca9f1bacc":["condition"],"235d3966-438a-4adf-a7c9-761001331b7f":["flight_status"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"e58432e8-ad81-4bc3-bf0c-ac0bebcca1da"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Request Record","reference":"x_1105922_flight_1_request","reference_display":"Request","type":"reference","base_type":"reference","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["record"]},"attributes":{}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.departure_city","label":"1 - Flight Info➛Departure City","reference_display":"Departure City","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["departure_city"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1c5d3fd2-3fe8-49ee-84df-3d7749820803"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.terminal","label":"1 - Flight Info➛Terminal","reference_display":"Terminal","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["terminal"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6e96bf81-4b6d-4c24-a148-6838ab2553c4"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.delay","label":"1 - Flight Info➛Delay","reference_display":"Delay","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["delay"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"e686b290-7110-461d-8860-bec1a9879328"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.arrival_city","label":"1 - Flight Info➛Arrival City","reference_display":"Arrival City","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["arrival_city"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"200c8620-095b-4e22-bd75-ad09fff4c7e5"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.arrival_time","label":"1 - Flight Info➛Arrival Time","reference_display":"Arrival Time","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["arrival_time"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"af02a09a-c5f0-4d07-b0c0-bf7a24d305f9"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.departure_time","label":"1 - Flight Info➛Departure Time","reference_display":"Departure Time","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["departure_time"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4aef3cb3-d65a-4f74-bb3c-8b98826f8cbd"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.gate","label":"1 - Flight Info➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["gate"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dcd1c789-3766-40fa-86e2-336c015b0f76"}}]</label_cache>
+        <master_snapshot>a4c1f1fcc3db12104b933342b4013163</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Populate Flight Details</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>c040becdc31792104b933342b4013176</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 05:57:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>729d2d78c3db12104b933342b40131b6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Populate Flight Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_hub_flow_729d2d78c3db12104b933342b40131b6</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:52</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=729d2d78c3db12104b933342b40131b6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=729d2d78c3db12104b933342b40131b6"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1105922_flight_1_request">flight_numberVALCHANGES^ORairlineVALCHANGES<item endquery="false" field="flight_number" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="airline" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-23 05:26:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c040becdc31792104b933342b4013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:52</sys_updated_on>
+        <table>x_1105922_flight_1_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>729d2d78c3db12104b933342b40131b6</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-23 05:26:52</sys_created_on>
+        <sys_id>8c40becdc31792104b933342b4013176</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:52</sys_updated_on>
+        <trigger display_value="">c040becdc31792104b933342b4013176</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=729d2d78c3db12104b933342b40131b6^sys_idNOT IN8c40becdc31792104b933342b4013176"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=729d2d78c3db12104b933342b40131b6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=729d2d78c3db12104b933342b40131b6^sys_idNOT INf69d2d78c3db12104b933342b40131b8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>729d2d78c3db12104b933342b40131b6</id>
+        <name>Populate Flight Details</name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 05:57:13</sys_created_on>
+        <sys_id>f69d2d78c3db12104b933342b40131b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 05:57:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f69d2d78c3db12104b933342b40131b8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=729d2d78c3db12104b933342b40131b6^sys_idNOT IN07b1b1fcc3db12104b933342b401315e,47b1b1fcc3db12104b933342b401315b,c3b1b1fcc3db12104b933342b4013157"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</model>
+        <model_id>729d2d78c3db12104b933342b40131b6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>07b1b1fcc3db12104b933342b401315e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=07b1b1fcc3db12104b933342b401315e"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">638088ac31c212108a7c7b974a26f26c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</model>
+        <model_id>729d2d78c3db12104b933342b40131b6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>47b1b1fcc3db12104b933342b401315b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=47b1b1fcc3db12104b933342b401315b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</model>
+        <model_id>729d2d78c3db12104b933342b40131b6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>c3b1b1fcc3db12104b933342b4013157</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c3b1b1fcc3db12104b933342b4013157"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=729d2d78c3db12104b933342b40131b6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=729d2d78c3db12104b933342b40131b6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=729d2d78c3db12104b933342b40131b6^sys_idNOT IN0fb1b1fcc3db12104b933342b4013176"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>Run once the Record is updated</comment>
+        <display_text/>
+        <flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>0fb1b1fcc3db12104b933342b4013176</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:46</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=729d2d78c3db12104b933342b40131b6^sys_idNOT IN03b1b1fcc3db12104b933342b401317c,0bb1b1fcc3db12104b933342b4013178"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update Flight Details on Request Record</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>03b1b1fcc3db12104b933342b401317c</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:27:31</sys_updated_on>
+        <ui_id>235d3966-438a-4adf-a7c9-761001331b7f</ui_id>
+        <values>H4sIAAAAAAAA/+1WTU/jMBD9K8jnNkqatrS9raiQVmJBgl0uwEYTe9Jacj6wHaBb9b/vJHFKCwjIigtaeqpn/CZvJm9mcrVmUrAZG6Lwg2kw5mEQhgPfH0yGQTwO42AgQkAMWI9lkCLd1MhzLeh8B6qsDOv1r0KARREFHi+1xsxuNuQX0hQKVpfuGln4UipBfja7uumxAjRFtKjZbP3E9V5KCmJUdPW85fSUo10V1VnkvEyJVyRb44lDzp3n4PucPASq6AR+j+GDxUwgEUlAGeyxFDLKMtcrNrO6JINGEGeZWm1vLGVmm0RTeDDyDz156Ff3EqTMuCvC9hi5AjXmZA4WLigyt6Xe1iuXHE1TE4EJlMoe7dqaC2eFlXnWQCzEqkXnqkyz06YibBtg532UhkhgUeVZMW/SSi6W+f15S/JYZnVJXIoq56C2J7BWy7i0FZ01Q4V1jVMoCpktokLnd7IGE5XUWyg6eInK7+mZRi4yD3jF26OqgndM9nltvgQtqyR+UBgCb3rMrMyRAmMeU6EaRrdlxaRJzKUQ1VWoSxDVSqjAXMvCfqNH3aEjvuk50cej1xTGp4+C2on5KPyHKAj80XQwiBIlF0sbBZHG2xKNfa7+862jWxO8g2LbBD/rV/8yZdcHz2wnu9iD08bhumD0YV0w+Uxd4NL49G3wlvj9wavjdUdJtd7NjvBBa0n/Iy7t6rr0/VCs13wyDcTg8LA/Gk/C/jAOoR9Ph9APpwAcpzg6hLG3C9xsfrdHK1P8pzgVkOIIJAF1ClAjaiQ1YCW17rnsQ/didc5nH0qx3EAxFmxpOoXaQ1IkGi2pzEB1CtKCCL+gzd4JWwFe2v9fovkSzdui6bYd3zHD2u14LFEJ88JQa1cjpqRWi1Ez5J6sR+c8uHTO7Yfih+3IYOzXv0+0Kf+b78Wbv8HLNJwmDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Flight Info">e30dad38c3db12104b933342b401319f</action_type>
+        <action_type_parent display_value="Flight Info">449260b0c31712104b933342b40131e1</action_type_parent>
+        <attributes/>
+        <comment>Get Flight Info from Flight Code from request record</comment>
+        <compiled_snapshot>e30dad38c3db12104b933342b401319f</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>0bb1b1fcc3db12104b933342b4013178</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:27:30</sys_updated_on>
+        <ui_id>c891d277-5683-4b3a-b94a-39aace9e57a6</ui_id>
+        <values>H4sIAAAAAAAA/5VSy27bMBD8lYJnW9DDCGTfCgcGCrQN0DS5BIGwIlcWAYpS+HCiCv73Lk3ZCdIekuPOznJnZvkwMSnYhuVFKkAUJS9EneVZuqrXRVGs8nqVZkUGOVswDR0Ss1Fy37qK9wIJPIDyAZ2mu0GAQ1FlCffGoHbJG+bxSFwh7aBgvP/ECG+lEtRhm4fHBRvAkAaHhm2md62PmlBQoyLq7rToyza6+K81Nw4BtM5IvZ/r7/P47RnsjQhysgXDF4daIOloQFlcsA402evNyDbOeAIMgrjRarwwWqkdPcYC98XKP7SuTNM0MBskaxxj91JWc4QRbq7BASnx3HkzU3nbS442hiKwAa/c9i0WCTeDk72OIw5qdZ7ule/0z5gGuzxwvhgh3pIIHILToH020ty2/fOvs8qd1KdQ5qbqOahLBY6iq70Leibm5e93KUfkn5xRYUcbqw6GgZBqMP1BnraQ6C7ZKyro9/TPpM7KvU6AB4cJXQCSHeHXJ/gejAx2f9AzNBzW3Wn55PFb+D91mjZNkZbLOhdXy5W4ypYlz8olclgDlvm6po9xXDA72q0Ca1+DogtVTz7YjLHNAVUx4zDCjRzcVxJ1wDmL4+NfmewFL30DAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=729d2d78c3db12104b933342b40131b6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=729d2d78c3db12104b933342b40131b6^sys_idNOT IN47b1b1fcc3db12104b933342b401317a,8bb1b1fcc3db12104b933342b401317c"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0fb1b1fcc3db12104b933342b4013179</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>47b1b1fcc3db12104b933342b401317a</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:50</sys_updated_on>
+        <ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</ui_id>
+        <values>H4sIAAAAAAAA/+1U227aQBD9FeRng3zBgHmL2iJFakJVUKSqiqzxegyrrndd7xpCEf/eWV8IaogaVXnsG3vmds74DEdH1aasjV6rG635Rjrz74+uw6XF6PfRkVCgM3eYkhk3XMmkAVxnB6K2gYXgm60ZrAyYWg+4HkhlBliU5kBJGdelgMPDW3LZlouswo5BCRXNMVg58+MfIXMoMRGQoqCWK1NxuaFyntEr9yD3Y+azMJiEgecFs7GfTsLUD7IQEELK6ws/9IIGnxvEfVWpnUe47iepKrO0fM918MmgzJBG5yA0uk4BMgOjqsMZqRCypRTPwJZLQ+0cm/yk+S/qHUSRTcyRNDJsg+dn0i2xhdlWcYbL0hJsEQOp6GqYEnUh71sddv2YQy1Mv35Cak39sLSkLYuOUr7aqv3XfuCCy0ZgFxSKgTi/wNAa0tqgth8GBRbUKCmgLGk5SVmpHW+KiUsx2gh6jHKh9jTUumsEzBIf0Y5gtCD8YwM/QMWtijtqQ8UtzRQ0Z0njRGpnKpJwataS/KwtoVZgJyVpt0EJmlW8NDc0Z4cd65P70sYXDj4e2Sz2s2A6HUaTWTgcpyEM03gMwzAGYBhjNIUJybDmTXRj3tPpdnW/XH+6+7L+9tLn79DxPa4hhiiPfC+6fg3jybVruHIHr59A8JcTsB/tjRfged7/E7g8Aa6T1sqdtmb4P1/Ao7V7O0G3vsmQcU1E1ha77f/vbeBABuDsEtqr6oeV8IydfgOtTnSOOQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c7b1b1fcc3db12104b933342b401317c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>8bb1b1fcc3db12104b933342b401317c</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:50</sys_updated_on>
+        <ui_id>3e0f0ad1-50d3-4269-b707-97222381cb93</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=729d2d78c3db12104b933342b40131b6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=729d2d78c3db12104b933342b40131b6"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6^sys_idNOT IN4bb1b1fcc3db12104b933342b401315d,8bb1b1fcc3db12104b933342b401315a,c3b1b1fcc3db12104b933342b4013160"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>4bb1b1fcc3db12104b933342b401315d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>8bb1b1fcc3db12104b933342b401315a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:15</sys_created_on>
+        <sys_id>c3b1b1fcc3db12104b933342b4013160</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_729d2d78c3db12104b933342b40131b6"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_729d2d78c3db12104b933342b40131b6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_729d2d78c3db12104b933342b40131b6"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Populate flight details on Flight Request record</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>populate_flight_details</internal_name>
+        <label_cache>[{"name":"Updated_1.current.flight_code","label":"Trigger - Record Updated➛Request Record➛Flight Code","reference":"","reference_display":"Flight Code","type":"string","base_type":"string","parent_table_name":"x_1105922_flight_1_request","column_name":"flight_code","usedInstances":{"c891d277-5683-4b3a-b94a-39aace9e57a6":["flight_code"]}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.flight_status","label":"1 - Flight Info➛Flight Status","reference_display":"Flight Status","type":"string","base_type":"string","usedInstances":{"fd61427c-9516-4a89-afbe-cefca9f1bacc":["condition"],"235d3966-438a-4adf-a7c9-761001331b7f":["flight_status"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"e58432e8-ad81-4bc3-bf0c-ac0bebcca1da"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Request Record","reference":"x_1105922_flight_1_request","reference_display":"Request","type":"reference","base_type":"reference","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["record"]},"attributes":{}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.departure_city","label":"1 - Flight Info➛Departure City","reference_display":"Departure City","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["departure_city"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1c5d3fd2-3fe8-49ee-84df-3d7749820803"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.terminal","label":"1 - Flight Info➛Terminal","reference_display":"Terminal","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["terminal"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"6e96bf81-4b6d-4c24-a148-6838ab2553c4"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.delay","label":"1 - Flight Info➛Delay","reference_display":"Delay","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["delay"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"e686b290-7110-461d-8860-bec1a9879328"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.arrival_city","label":"1 - Flight Info➛Arrival City","reference_display":"Arrival City","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["arrival_city"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"200c8620-095b-4e22-bd75-ad09fff4c7e5"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.arrival_time","label":"1 - Flight Info➛Arrival Time","reference_display":"Arrival Time","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["arrival_time"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"af02a09a-c5f0-4d07-b0c0-bf7a24d305f9"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.departure_time","label":"1 - Flight Info➛Departure Time","reference_display":"Departure Time","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["departure_time"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4aef3cb3-d65a-4f74-bb3c-8b98826f8cbd"}},{"name":"c891d277-5683-4b3a-b94a-39aace9e57a6.gate","label":"1 - Flight Info➛Gate","reference_display":"Gate","type":"string","base_type":"string","usedInstances":{"235d3966-438a-4adf-a7c9-761001331b7f":["gate"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dcd1c789-3766-40fa-86e2-336c015b0f76"}}]</label_cache>
+        <master>true</master>
+        <name>Populate Flight Details</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Populate Flight Details">729d2d78c3db12104b933342b40131b6</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a4c1f1fcc3db12104b933342b4013163</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:52</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a4c1f1fcc3db12104b933342b4013163^sys_idNOT IN28c1f1fcc3db12104b933342b4013164"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a4c1f1fcc3db12104b933342b4013163</id>
+        <name>Populate Flight Details</name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>28c1f1fcc3db12104b933342b4013164</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=28c1f1fcc3db12104b933342b4013164"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a4c1f1fcc3db12104b933342b4013163^sys_idNOT IN20c1f1fcc3db12104b933342b4013179,6cc1f1fcc3db12104b933342b4013165,e4c1f1fcc3db12104b933342b4013172"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</model>
+        <model_id>a4c1f1fcc3db12104b933342b4013163</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>20c1f1fcc3db12104b933342b4013179</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=20c1f1fcc3db12104b933342b4013179"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</model>
+        <model_id>a4c1f1fcc3db12104b933342b4013163</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>6cc1f1fcc3db12104b933342b4013165</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6cc1f1fcc3db12104b933342b4013165"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">638088ac31c212108a7c7b974a26f26c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</model>
+        <model_id>a4c1f1fcc3db12104b933342b4013163</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>e4c1f1fcc3db12104b933342b4013172</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:46:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e4c1f1fcc3db12104b933342b4013172"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a4c1f1fcc3db12104b933342b4013163^sys_idNOT IN74c1f1fcc3db12104b933342b4013193"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment>Run once the Record is updated</comment>
+        <display_text/>
+        <flow display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:22</sys_created_on>
+        <sys_id>74c1f1fcc3db12104b933342b4013193</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:51</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a4c1f1fcc3db12104b933342b4013163^sys_idNOT INbcc1f1fcc3db12104b933342b4013192,ecc1f1fcc3db12104b933342b4013191"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update Flight Details on Request Record</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:22</sys_created_on>
+        <sys_id>bcc1f1fcc3db12104b933342b4013192</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:22</sys_updated_on>
+        <ui_id>235d3966-438a-4adf-a7c9-761001331b7f</ui_id>
+        <values>H4sIAAAAAAAA/+1WTU/jMBD9K8jnNkqatrS9raiQVmJBgl0uwEYTe9Jacj6wHaBb9b/vJHFKCwjIigtaeqpn/CZvJm9mcrVmUrAZG6Lwg2kw5mEQhgPfH0yGQTwO42AgQkAMWI9lkCLd1MhzLeh8B6qsDOv1r0KARREFHi+1xsxuNuQX0hQKVpfuGln4UipBfja7uumxAjRFtKjZbP3E9V5KCmJUdPW85fSUo10V1VnkvEyJVyRb44lDzp3n4PucPASq6AR+j+GDxUwgEUlAGeyxFDLKMtcrNrO6JINGEGeZWm1vLGVmm0RTeDDyDz156Ff3EqTMuCvC9hi5AjXmZA4WLigyt6Xe1iuXHE1TE4EJlMoe7dqaC2eFlXnWQCzEqkXnqkyz06YibBtg532UhkhgUeVZMW/SSi6W+f15S/JYZnVJXIoq56C2J7BWy7i0FZ01Q4V1jVMoCpktokLnd7IGE5XUWyg6eInK7+mZRi4yD3jF26OqgndM9nltvgQtqyR+UBgCb3rMrMyRAmMeU6EaRrdlxaRJzKUQ1VWoSxDVSqjAXMvCfqNH3aEjvuk50cej1xTGp4+C2on5KPyHKAj80XQwiBIlF0sbBZHG2xKNfa7+862jWxO8g2LbBD/rV/8yZdcHz2wnu9iD08bhumD0YV0w+Uxd4NL49G3wlvj9wavjdUdJtd7NjvBBa0n/Iy7t6rr0/VCs13wyDcTg8LA/Gk/C/jAOoR9Ph9APpwAcpzg6hLG3C9xsfrdHK1P8pzgVkOIIJAF1ClAjaiQ1YCW17rnsQ/didc5nH0qx3EAxFmxpOoXaQ1IkGi2pzEB1CtKCCL+gzd4JWwFe2v9fovkSzdui6bYd3zHD2u14LFEJ88JQa1cjpqRWi1Ez5J6sR+c8uHTO7Yfih+3IYOzXv0+0Kf+b78Wbv8HLNJwmDQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Flight Info">e30dad38c3db12104b933342b401319f</action_type>
+        <action_type_parent display_value="Flight Info">449260b0c31712104b933342b40131e1</action_type_parent>
+        <attributes/>
+        <comment>Get Flight Info from Flight Code from request record</comment>
+        <compiled_snapshot>e30dad38c3db12104b933342b401319f</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:22</sys_created_on>
+        <sys_id>ecc1f1fcc3db12104b933342b4013191</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:22</sys_updated_on>
+        <ui_id>c891d277-5683-4b3a-b94a-39aace9e57a6</ui_id>
+        <values>H4sIAAAAAAAA/5VSy27bMBD8lYJnW9DDCGTfCgcGCrQN0DS5BIGwIlcWAYpS+HCiCv73Lk3ZCdIekuPOznJnZvkwMSnYhuVFKkAUJS9EneVZuqrXRVGs8nqVZkUGOVswDR0Ss1Fy37qK9wIJPIDyAZ2mu0GAQ1FlCffGoHbJG+bxSFwh7aBgvP/ECG+lEtRhm4fHBRvAkAaHhm2md62PmlBQoyLq7rToyza6+K81Nw4BtM5IvZ/r7/P47RnsjQhysgXDF4daIOloQFlcsA402evNyDbOeAIMgrjRarwwWqkdPcYC98XKP7SuTNM0MBskaxxj91JWc4QRbq7BASnx3HkzU3nbS442hiKwAa/c9i0WCTeDk72OIw5qdZ7ule/0z5gGuzxwvhgh3pIIHILToH020ty2/fOvs8qd1KdQ5qbqOahLBY6iq70Leibm5e93KUfkn5xRYUcbqw6GgZBqMP1BnraQ6C7ZKyro9/TPpM7KvU6AB4cJXQCSHeHXJ/gejAx2f9AzNBzW3Wn55PFb+D91mjZNkZbLOhdXy5W4ypYlz8olclgDlvm6po9xXDA72q0Ca1+DogtVTz7YjLHNAVUx4zDCjRzcVxJ1wDmL4+NfmewFL30DAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a4c1f1fcc3db12104b933342b4013163^sys_idNOT IN24c1f1fcc3db12104b933342b4013190,24c1f1fcc3db12104b933342b4013191"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0fb1b1fcc3db12104b933342b4013179</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>24c1f1fcc3db12104b933342b4013190</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:51</sys_updated_on>
+        <ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPAeWDAOGtokOq1JZpoErTVEU3jgPWHDuLHSiL+O+7TsKHVqa1Wh/3hs+9vvecEx9RE1WZojJ6pW605mtJpt+eHcKlxfB3TSTkjEwJVTLlhisZN4BDtiAqW5gLvt6Y3tKAqXSP655UpsfywuyxKeW6ELB/eksv3XCRlqxjUECJewwrybT+rcRTHJW5kHkR9WjgjwLfdf3J0EtGQeL5aQAMAhwoIGECW2dH6r37BnH+qMnsC4trU3K57s733ZTlEVRlall5rkPYi2EyZcgnA6GZQ3KQKRhV7k9IySBdSHEGNlwaHEds84vmP3GhH4a2MWMokbK2eDrGnYctnN2CAaRSUVOVXSvdKE6Zbs1JWQaVMLNLrG1YFFZqe8VAIo63lahy+dg6Qk4Djp8MkUojCVZYpZZ6pyNbbtTuy5HlnMvGla4oFAVxOoFB75LKWD41YYLlOCjOoSjQ0bgo1ZY3l5FLPlgLPAwyoXa41L7IAVBLfIDGwmCO+G0DP0HJrYoHHIOXW5oJaE7j5vXiOLSJkYND9F7PBGh9Fonuxj8qS7GV3ImLW3/sFVrywtzg5i3rdByc12G4yEFd00nkpf543A9Hk6A/TALoJ9EQ+kEEQFnEwjGMUJiNQKybCBwOd8vHxerTw+fV19dp+YCJ78tUBGEWem54PVPD0bVMXUnTO4Pk/yVI9iu+MUeu6/4P0j8Hieu4ff6dtmb5B+bo2Yam3XnymnKN1FYWuzv+99jCHh8Xp5fQTpXfragzdvgFJ5AQWcUGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c7b1b1fcc3db12104b933342b401317c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Populate Flight Details">a4c1f1fcc3db12104b933342b4013163</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>fd61427c-9516-4a89-afbe-cefca9f1bacc</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:22</sys_created_on>
+        <sys_id>24c1f1fcc3db12104b933342b4013191</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:51</sys_updated_on>
+        <ui_id>3e0f0ad1-50d3-4269-b707-97222381cb93</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163^sys_idNOT IN28c1f1fcc3db12104b933342b4013189,a0c1f1fcc3db12104b933342b4013170,e8c1f1fcc3db12104b933342b4013176"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>28c1f1fcc3db12104b933342b4013189</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>a0c1f1fcc3db12104b933342b4013170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:21</sys_created_on>
+        <sys_id>e8c1f1fcc3db12104b933342b4013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 06:15:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a4c1f1fcc3db12104b933342b4013163"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>729d2d78c3db12104b933342b40131b6</sys_id>
+        <latest_snapshot>a4c1f1fcc3db12104b933342b4013163</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch4-11-22-2024_12-02-2024_1408.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=729d2d78c3db12104b933342b40131b6^sys_idNOT INb4c1f1fcc3db12104b933342b40131b6"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b4c1f1fcc3db12104b933342b40131b6","name":"plan","plan_signature":null}}</plan>
+        <plan_id>729d2d78c3db12104b933342b40131b6</plan_id>
+        <snapshot>e9607201c35792104b933342b40131e4</snapshot>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 06:15:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b4c1f1fcc3db12104b933342b40131b6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:26:52</sys_updated_on>
+        <trigger display_value="">c040becdc31792104b933342b4013176</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=729d2d78c3db12104b933342b40131b6"/>
+</record_update>

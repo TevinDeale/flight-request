@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set Flight Code form Airline ICAO Code and Flight Number</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Flight Code</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Check if either flight_number or airline.icao fields changed
+    if (control.name === 'flight_number' || control.name === 'airline.icao') {
+        var flightNumber = g_form.getValue('flight_number');
+        var airlineIcao = g_form.getValue('airline.icao');
+        
+        // Only proceed if both fields have values
+        if (flightNumber && airlineIcao) {
+            // Validate flight number is numeric
+            if (/^\d+$/.test(flightNumber)) {
+                var flightCode = airlineIcao + flightNumber;
+				g_form.setReadOnly('flight_code', false);
+                g_form.setValue('flight_code', flightCode);
+				g_form.setReadOnly('flight_code', true);
+            } else {
+                g_form.showErrorBox('flight_number', 'Flight Number should only contain numbers');
+                g_form.setValue('flight_number', '');
+            }
+        } else {
+            // Clear flight code if either field is empty
+            g_form.setValue('flight_code', '');
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:35:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>06681d7cc35b12104b933342b40131d2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Set Flight Code</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_script_client_06681d7cc35b12104b933342b40131d2</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:44:13</sys_updated_on>
+        <table>x_1105922_flight_1_request</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flight Request">c7917cb8c35712104b933342b4013144</application>
+        <file_path/>
+        <instance_id>4408371e1b163190168f4089bd4bcb39</instance_id>
+        <instance_name>dev206424</instance_name>
+        <name>sys_script_client_06681d7cc35b12104b933342b40131d2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Set Flight Code form Airline ICAO Code and Flight Number&lt;/description&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Set Flight Code&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Check if either flight_number or airline.icao fields changed
+    if (control.name === 'flight_number' || control.name === 'airline.icao') {
+        var flightNumber = g_form.getValue('flight_number');
+        var airlineIcao = g_form.getValue('airline.icao');
+        
+        // Only proceed if both fields have values
+        if (flightNumber &amp;&amp; airlineIcao) {
+            // Validate flight number is numeric
+            if (/^\d+$/.test(flightNumber)) {
+                var flightCode = airlineIcao + flightNumber;
+				g_form.setReadOnly('flight_code', false);
+                g_form.setValue('flight_code', flightCode);
+				g_form.setReadOnly('flight_code', true);
+            } else {
+                g_form.showErrorBox('flight_number', 'Flight Number should only contain numbers');
+                g_form.setValue('flight_number', '');
+            }
+        } else {
+            // Clear flight code if either field is empty
+            g_form.setValue('flight_code', '');
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;tevin.deale&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-22 04:35:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;06681d7cc35b12104b933342b40131d2&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set Flight Code&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Flight Request" source="x_1105922_flight_1"&gt;c7917cb8c35712104b933342b4013144&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flight Request"&gt;c7917cb8c35712104b933342b4013144&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_06681d7cc35b12104b933342b40131d2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;tevin.deale&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-22 04:44:13&lt;/sys_updated_on&gt;&lt;table&gt;x_1105922_flight_1_request&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1820502380</payload_hash>
+        <record_name>Set Flight Code</record_name>
+        <reverted_from/>
+        <source>4b917cb8c35712104b933342b4013146</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:44:13</sys_created_on>
+        <sys_id>adecd5f0c39b12104b933342b4013157</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1948c53407c0000001</sys_recorded_at>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:44:13</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>65ecd5f0769b1210e51e29f6c0e09657</update_guid>
+        <update_guid_history>65ecd5f0769b1210e51e29f6c0e09657:-1820502380,debc15b0a19b12108f63b2b732e6f583:130904580,395c9db0d29b12101ce45a83f611a630:-1414601214,de4c1170839b1210a5c0f53684af9dfb:398881758,b6dbd1b0a59b121052897fda2d507369:634344954,26ead97ce85b121080b0ddd47cfbeaeb:2112884689</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-22 04:46:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>52b5b382b5214bdfab197c893f3497a1</sys_id>
+        <sys_metadata>06681d7cc35b12104b933342b40131d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Flight Code</sys_name>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_parent display_value="Request">c2c2b4b0c39712104b933342b4013137</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_scope_delete display_value="">2f73ffb238dd4bc3a34189ae446bb301</sys_scope_delete>
+        <sys_update_name>sys_script_client_06681d7cc35b12104b933342b40131d2</sys_update_name>
+        <sys_update_version display_value="sys_script_client_06681d7cc35b12104b933342b40131d2">adecd5f0c39b12104b933342b4013157</sys_update_version>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-22 04:46:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

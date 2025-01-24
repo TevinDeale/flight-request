@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Get Flight Details</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.approval_status != "Approved" &amp;&amp; current.approval_status != 'requested';</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Get Flight Details</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function() {
+	
+	try {
+		var inputs = {};
+		inputs['record_sys_id'] = current.sys_id; // String 
+
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		sn_fd.FlowAPI.getRunner().subflow('x_1105922_flight_1.get_flight_details__subflow').inBackground().withInputs(inputs).run();
+
+		action.setRedirectURL(current);
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		//var result = sn_fd.FlowAPI.getRunner().subflow('x_1105922_flight_1.get_flight_details__subflow').inForeground().withInputs(inputs).run();
+		//var outputs = result.getOutputs();
+
+		// Current subflow has no outputs defined.		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+	
+})();]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-23 05:11:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cabc2249c31792104b933342b401313b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Get Flight Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flight Request" source="x_1105922_flight_1">c7917cb8c35712104b933342b4013144</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flight Request">c7917cb8c35712104b933342b4013144</sys_scope>
+        <sys_update_name>sys_ui_action_cabc2249c31792104b933342b401313b</sys_update_name>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 06:35:18</sys_updated_on>
+        <table>x_1105922_flight_1_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>cabc2249c31792104b933342b401313b</id>
+        <sys_created_by>tevin.deale</sys_created_by>
+        <sys_created_on>2025-01-23 05:21:56</sys_created_on>
+        <sys_id>3f1f268dc31792104b933342b4013163</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>tevin.deale</sys_updated_by>
+        <sys_updated_on>2025-01-23 05:21:56</sys_updated_on>
+        <table>sys_ui_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
